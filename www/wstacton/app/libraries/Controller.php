@@ -1,27 +1,28 @@
 <?php 
+namespace app\libraries;
+class Controller{
 
-    class Controller{
-
-        public function model($model)
-        {
-            require_once '../app/models/' .$model.'.php';
-            return new $model();
-        }
-
-        public function view($view, $data= [])
-        {
-            if(file_exists('../app/views/'.$view.'.php')){
-                require_once ('../app/views/'.$view.'.php');
-            }else{
-
-            }
-        }
-        
-        public function pr($data)
-        {
-            echo "<pre>";
-            print_r($data);
-            echo "</pre>";
-        }
-
+    public function model($model)
+    {
+        require_once '../app/models/' .$model.'.php';
+        return new $model();
     }
+
+    public function view($view, $data= [])
+    {
+        if(file_exists('../app/views/'.$view.'.php')){
+            require_once ('../app/views/'.$view.'.php');
+        }else{
+
+        }
+    }
+
+    public function service($service)
+    { 
+        var_dump(require_once '../app/services/'.$service.'.php'); exit;
+        return new $service();
+    }
+    
+
+
+}

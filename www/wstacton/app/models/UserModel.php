@@ -1,5 +1,6 @@
 <?php
-    Class UserModel{
+use app\libraries\Database as Database;
+    Class UserModel extends Database{
 
         private $db;
         public function __construct()

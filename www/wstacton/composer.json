@@ -1,0 +1,16 @@
+{
+    "name": "westacton/gamesite",
+    "description": "The Game Site",
+    "type": "exam",
+    "autoload": {
+
+        "classmap": ["app/libraries", "app/controllers", "app/models", "app/services"],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "cboden/ratchet": "^0.4",
+        "react/zmq": "0.2.*|0.3.*"
+    }
+}
